@@ -1,0 +1,6 @@
+简单的spring cloud客户端
+必须引入web，不然起不起来
+和client2的区别就是端口不一样，项目名称不一样，但是spring.application.name是一样的，这样就可以实现负载均衡，OpenFeign和zuul访问都是轮训访问的
+断路器的简单使用，断路器主要使用在feign，为了防止微服务相互调用导致的雪崩效应
+使用分布式配置config模块，config微服务化到eureka，不需要用地址
+可以通过post接口http://localhost:8281/actuator/refresh去刷新config修改的配置，但是只能使得当前client1有效

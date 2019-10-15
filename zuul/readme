@@ -1,0 +1,5 @@
+spring cloud zuul
+提供简单的服务网关功能
+去除不带token的请求
+自带负载均衡功能
+刚启动起来的时候，会报com.netflix.zuul.exception.ZuulException: Hystrix Readed time out，可能需要Gateway来替换了

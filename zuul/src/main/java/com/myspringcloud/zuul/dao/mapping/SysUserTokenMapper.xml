@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myspringcloud.zuul.dao.SysUserTokenMapper">
+
+    <resultMap type="com.myspringcloud.zuul.entity.SysUserToken" id="SysUserTokenMap">
+        <result property="id" column="ID" />
+        <result property="userId" column="USER_ID" />
+        <result property="token" column="TOKEN" />
+    </resultMap>
+
+</mapper>

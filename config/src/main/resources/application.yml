@@ -1,0 +1,27 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AryaRicky/onfig-repo
+          username: 1357289468@qq.com
+          password: 123456
+          search-paths: config
+#  rabbitmq:
+#    host: 135.64.99.122
+#    port: 5672
+#    username: guest
+#    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://135.64.99.122:8000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

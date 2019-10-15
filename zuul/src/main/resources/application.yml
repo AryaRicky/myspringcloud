@@ -1,0 +1,23 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: api-gateway
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: ljg
+    password: Aa1234567
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://135.64.99.122:8000/eureka/
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 30000
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000

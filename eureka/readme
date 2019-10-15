@@ -1,0 +1,2 @@
+简单的spring cloud eureka，提供服务注册功能
+hostname使用域名client连不上没细看

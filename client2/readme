@@ -1,0 +1,2 @@
+简单的spring cloud客户端
+必须引入web，不然起不起来

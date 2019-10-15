@@ -1,0 +1,2 @@
+分布式配置，注册服务到eureka
+jssecacerts是github的https证书，老是会过期，就要重新生成一下。通过config下面的类生成，copy到java的security目录就好了

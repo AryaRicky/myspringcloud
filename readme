@@ -3,4 +3,4 @@ spring cloud分布式框架搭建：
 2.client1、client2服务提供者，client1使用了分布式配置
 3.feign声明式服务调用
 4.zuul网关
-5.config分布式配置服务，配置自动刷新需要结合github的webhooks才行。否则需要手动调用http://localhost:9004/actuator/bus-refresh才能通知到各个客户端，但是github的webhooks只能访问外网
+5.config分布式配置服务，整合了bus，使用了rabbitmq，修改配置后post调用http://localhost:9004/actuator/bus-refresh即可刷新配置信息

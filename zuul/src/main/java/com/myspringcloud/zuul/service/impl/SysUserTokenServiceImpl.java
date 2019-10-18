@@ -22,6 +22,6 @@ public class SysUserTokenServiceImpl extends ServiceImpl<SysUserTokenMapper, Sys
 
     @Override
     public SysUserToken findByToken(String token) {
-        return getOne(new QueryWrapper<SysUserToken>().lambda().eq(SysUserToken::getToken, token).lt(SysUserToken::getExpireTime, new Date()));
+        return getOne(new QueryWrapper<SysUserToken>().lambda().eq(SysUserToken::getToken, token).gt(SysUserToken::getExpireTime, new Date()));
     }
 }

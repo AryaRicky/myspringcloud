@@ -3,3 +3,5 @@ spring cloud zuul
 去除不带token的请求
 自带负载均衡功能
 刚启动起来的时候，会报com.netflix.zuul.exception.ZuulException: Hystrix Readed time out，可能需要Gateway来替换了
+整合shiro，需要验证的会校验是否带token并且不过期，用token去数据库查询用户是否正常，正常进行逻辑处理，不正常就返回
+整合了redis集群

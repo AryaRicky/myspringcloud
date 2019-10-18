@@ -10,6 +10,16 @@ spring:
     password: Aa1234567
   main:
     allow-bean-definition-overriding: true
+  redis:
+    cluster:
+      nodes: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
+    password:
+    jedis:
+      pool:
+        max-wait: 5000
+        max-idle: 50
+        min-idle: 5
+    timeout: 15000
 eureka:
   client:
     service-url:
@@ -21,3 +31,7 @@ zuul:
 ribbon:
   ReadTimeout: 10000
   ConnectTimeout: 10000
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

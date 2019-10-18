@@ -2,5 +2,6 @@ spring cloud分布式框架搭建：
 1.eureka服务注册发现中心
 2.client1、client2服务提供者，client1使用了分布式配置
 3.feign声明式服务调用
-4.zuul网关
+4.zuul网关并带有shiro权限安全校验
 5.config分布式配置服务，整合了bus，使用了rabbitmq，修改配置后post调用http://localhost:9004/actuator/bus-refresh即可刷新配置信息
+6.整合了redis集群

@@ -19,13 +19,12 @@ public class UserController {
     public String hello() {
         SysUser sysUser = new SysUser();
         sysUser.setUsername("jack sc");
-        redisTemplate.opsForValue().set("user", sysUser, 10, TimeUnit.SECONDS);
+        redisTemplate.opsForValue().set("user", sysUser, 10, TimeUnit.MINUTES);
         return "hello";
     }
 
     @RequestMapping("get")
     public Object get() {
-        Object user = redisTemplate.opsForValue().get("user");
-        return user;
+        return redisTemplate.opsForValue().get("user");
     }
 }
